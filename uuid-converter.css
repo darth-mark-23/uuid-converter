@@ -1,0 +1,92 @@
+body {
+    background: #800020;
+    color: lightgrey;
+    padding-top: 20px;
+}
+
+main {
+    height: 90vh;
+    max-width: 1200px;
+}
+
+section {
+    margin: 15px 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+/* form p {
+    display: inline-block;
+    grid-column-start: 1;
+}
+
+form .input-text {
+    grid-column-start: 2;
+    min-width: 500px;
+}
+
+form .copy {
+    grid-column-start: 3;
+} */
+
+/* Media queries to fix small viewport problems */
+
+@media(min-width: 768px ) {
+    form {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    form p {
+        display: inline-block;
+        grid-column-start: 1;
+    }
+    
+    form .input-text {
+        grid-column-start: 2;
+        min-width: 500px;
+    }
+    
+    form .copy {
+        grid-column-start: 2;
+        justify-self: end;
+        margin: 10px 0;
+    }
+}
+
+@media(min-width: 992px) {
+    form {
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    form p {
+        display: inline-block;
+        grid-column-start: 1;
+    }
+    
+    form .input-text {
+        grid-column-start: 2;
+        min-width: 500px;
+    }
+    
+    form .copy {
+        grid-column-start: 3;
+        justify-self: stretch;
+        margin: 0;
+    }
+}
+
+
+/* Just hiding the raw input for now; not really needed I think? */
+#raw, #rawp {
+    display: none;
+}
