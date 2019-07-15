@@ -17,27 +17,35 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Extra-Small Displays
+----------------------------------------------------*/
+
+body {
+    margin: 0 auto;
+    width: 90vw;
+    min-width: 400px;
+}
+
+
 form {
     display: grid;
     grid-template-columns: 1fr;
     border: 1px solid lightgrey;
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
-/* form p {
-    display: inline-block;
-    grid-column-start: 1;
-}
+/* Small Displays
+----------------------------------------------------*/
 
-form .input-text {
-    grid-column-start: 2;
-    min-width: 500px;
+@media(min-width: 680px) {
+    body {
+        width: 90vw;
+    }
+    form {
+        font-size:1.5rem;
+    }
 }
-
-form .copy {
-    grid-column-start: 3;
-} */
 
 /* Media queries to fix small viewport problems */
 
@@ -48,18 +56,18 @@ form .copy {
 
     form p {
         display: inline-block;
-        grid-column-start: 1;
+        grid-column-start: 1 / span 2;
     }
     
     form .input-text {
-        grid-column-start: 2;
+        grid-column-start: 1;
         min-width: 500px;
     }
     
     form .copy {
         grid-column-start: 2;
-        justify-self: end;
-        margin: 10px 0;
+        /* justify-self: end; */
+        /* margin: 10px 0; */
     }
 }
 
